@@ -24,9 +24,10 @@ long potencia(int n){
 
 void calculaAlocation(long* tableSize,long* memSize,long memtotal,int s,int d){
 
-	 *tableSize = potencia(32-s);
-	 printf("Q:%ld\n",potencia(32-s));
-	 *memSize = potencia(d) - *tableSize ;
+	printf("s:%d d:%d",s,d);
+	 *tableSize = potencia(s);
+	 *memSize = potencia(d);
+	 *memSize =  *memSize -  *tableSize;
 
 }
 
